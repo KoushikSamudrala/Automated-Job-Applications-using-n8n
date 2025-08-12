@@ -100,6 +100,6 @@ https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search
 ```
 
 ### Workflow Overview
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/KoushikSamudrala/Automated-Job-Applications-using-n8n/blob/main/workflow.JPG)
 
 
