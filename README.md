@@ -102,4 +102,60 @@ https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search
 ### Workflow Overview
 ![alt text](https://github.com/KoushikSamudrala/Automated-Job-Applications-using-n8n/blob/main/workflow.JPG)
 
+### Customization Options
+1. Job Criteria: Modify keywords/location in HTTP request node
 
+2. Cover Letter Tone: Edit system prompt in Gemini node
+
+3. Tracking Columns: Adjust Google Sheets mapping fields
+
+4. Schedule: Change trigger interval in Schedule node
+
+### Troubleshooting
+  - 403 Forbidden Errors: Refresh LinkedIn credentials
+
+  - Sheet Permission Issues: Re-share Google Sheet with service account
+
+  -  Empty Cover Letters: Verify Gemini API quota and prompt formatting
+
+  -  Job Extraction Failures: Update CSS selectors in HTML node
+
+### Ethical Considerations
+ - Respect LinkedIn's robots.txt
+
+ -  Limit request frequency
+
+ -   Do not mass-apply to positions
+
+ -   Customize generated cover letters before submitting
+### License
+This project is licensed under the MIT License
+
+### credentials.example.json
+```json
+{
+  "GOOGLE_SHEETS_SERVICE_ACCOUNT": {
+    "type": "service_account",
+    "project_id": "your-project-id",
+    "private_key_id": "your-private-key-id",
+    "private_key": "-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n",
+    "client_email": "your-service-account@project-id.iam.gserviceaccount.com",
+    "client_id": "your-client-id",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/..."
+  },
+  "GEMINI_API_KEY": "your-gemini-api-key-here",
+  "LINKEDIN_SESSION_COOKIE": "li_at=YOUR_COOKIE_VALUE; JSESSIONID=YOUR_SESSION_ID"
+}
+```
+
+### Key Features Highlight
+1. **AI-Powered Personalization**: Gemini analyzes job descriptions and your resume to generate tailored cover letters
+2. **Automated Tracking**: All applications logged in Google Sheets with timestamps
+3. **Smart Deduplication**: Uses job titles and company names to prevent duplicate applications
+4. **Timezone Awareness**: Runs daily at 9 AM in your local timezone
+5. **Error Resilience**: Built-in retry mechanisms for API calls
+
+This implementation provides a complete, production-ready solution that handles authentication, scheduling, AI integration, and data persistence. The documentation includes both quick-start instructions for technical users and detailed setup guides for complex configurations.
