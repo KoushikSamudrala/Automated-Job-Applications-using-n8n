@@ -100,5 +100,6 @@ https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search
 ```
 
 ### Workflow Overview
-![This is an alt text.](/images\workflow.png)
+![alt text](http://url/to/img.png)
+
 
